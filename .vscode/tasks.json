@@ -1,0 +1,80 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Server",
+        "type": "shell",
+        "command": "npm run dev",
+        "group": "none",
+        "isBackground": true,
+        "presentation": {
+          "reveal": "silent",
+          "panel": "new"
+        },
+        "problemMatcher":[
+          {
+            "base": "$tsc",
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern":"Building documentation",
+              "endsPattern":"Serving"
+            },
+          }
+        ]
+        
+      },
+      {
+        "label": "Open file in Editor",
+        "command": "${input:openFileInEditor}",
+      },
+      {
+        "label": "Split editor right",
+        "command": "${input:splitEditorRight}",
+      },
+      {
+        "label": "Open browser in panel",
+        "command": "${input:openSimpleBrowser}",
+      },
+      {
+        "label": "Open new terminal",
+        "command": "${input:openNewTerminal}",
+      },
+      {
+        "label": "Run everything",
+        "dependsOn":[ "Open file in Editor", "Split editor right", "Open browser in panel","Open new terminal"],
+        "dependsOrder": "sequence",
+        "runOptions": {
+          "runOn": "folderOpen"
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "id": "openFileInEditor",
+        "type": "command",
+        "command": "workbench.action.files.openFile",
+        "args": ["${workspaceFolder}/send-sms.js"]
+      },
+      {
+        "id": "splitEditorRight",
+        "type": "command",
+        "command": "workbench.action.splitEditorRight",
+        "args": []
+      },
+      {
+        "id": "openSimpleBrowser",
+        "type": "command",
+        "command": "simpleBrowser.show",
+        "args": [
+            "https://starlight.astro.build/getting-started/"
+        ]
+      },
+      {
+        "id": "openNewTerminal",
+        "type": "command",
+        "command": "workbench.action.terminal.new",
+        "args": []
+      }
+
+    ]
+  }
