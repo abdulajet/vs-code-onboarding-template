@@ -1,7 +1,6 @@
 {
     "files.exclude": {
         "**/.DS_Store": true,
-        "**/README.md": true,
         "send-sms.js": false
     }
 }
