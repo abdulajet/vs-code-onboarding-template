@@ -2,5 +2,6 @@
     "files.exclude": {
         "**/.DS_Store": true,
         "send-sms.js": false
-    }
+    },
+    "vs-browser.url": "https://abduls.dev"
 }

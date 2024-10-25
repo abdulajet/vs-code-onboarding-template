@@ -2,15 +2,6 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Split",
-      "type": "process",
-      "command": "${input:splitEditorRight}",
-      "presentation": {
-        "reveal": "never",
-        "close": true
-      }
-    },
-    {
       "label": "OpenBroswer",
       "command": "${input:openSimpleBrowser}",
       "presentation": {
@@ -29,7 +20,6 @@
     {
       "label": "Run",
       "dependsOn": [
-        "Split",
         "OpenBroswer",
         "OpenTerminal"
       ],
@@ -41,17 +31,9 @@
   ],
   "inputs": [
     {
-      "id": "splitEditorRight",
+      "id": "openBrowser",
       "type": "command",
-      "command": "workbench.action.splitEditorRight"
-    },
-    {
-      "id": "openSimpleBrowser",
-      "type": "command",
-      "command": "simpleBrowser.show",
-      "args": [
-        "https://abduls.dev"
-      ]
+      "command": "vs-browser.start"
     },
     {
       "id": "openNewTerminal",
