@@ -1,22 +1,7 @@
 {
-    // "livePreview.defaultPreviewPath": "/index.html",
     "files.exclude": {
-        "send-sms.js": false,
-        "**/.**": true,
-        "**/node_modules": true,
-        "**/public": true,
-        "**/src": true,
-        "**/package.json": true,
-        "**/package-lock.json": true,
-        "**/README.md": true,
-        "**/index.html": true,
-        "**/astro.config.mjs": true,
-        "**/github-vtqapk.code-workspace": true,
-        "**/tsconfig.json": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/README.md": true,
+        "send-sms.js": false
     }
 }
