@@ -3,7 +3,7 @@
   "tasks": [
     {
       "label": "OpenBroswer",
-      "command": "${input:openSimpleBrowser}",
+      "command": "${input:openBrowser}",
       "presentation": {
         "reveal": "never",
         "close": true
