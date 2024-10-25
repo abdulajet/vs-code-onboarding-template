@@ -1,29 +1,6 @@
 {
   "version": "2.0.0",
   "tasks": [
-    // {
-    //   "label": "OpenFiles",
-    //   "type": "shell",
-    //   "command": "code",
-    //   "args": [
-    //     "./send-sms.js"
-    //   ],
-    //   "problemMatcher": [],
-    //   "isBackground": true,
-    //   "presentation": {
-    //     "reveal": "never",
-    //     "close": true
-    //   }
-    // },
-    {
-      "label": "OpenFiles",
-      "type": "process",
-      "command": "${input:openFiles}",
-      "presentation": {
-        "reveal": "never",
-        "close": true
-      }
-    },
     {
       "label": "Split",
       "type": "process",
@@ -52,7 +29,6 @@
     {
       "label": "Run",
       "dependsOn": [
-        // "OpenFiles",
         "Split",
         "OpenBroswer",
         "OpenTerminal"
@@ -64,11 +40,6 @@
     }
   ],
   "inputs": [
-    {
-      "id": "openFiles",
-      "type": "command",
-      "command": "workbench.action.files.openFile"
-    },
     {
       "id": "splitEditorRight",
       "type": "command",
